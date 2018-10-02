@@ -6,5 +6,8 @@ def safe_print_division(a, b):
     except:
         pass
     finally:
-        print("Inside result: {}".format(quotient))
-        return quotient
+        if quotient is not None:
+            print("Inside result: {:.1f}".format(quotient))
+        else:
+            print("Inside result: None")
+    return quotient
