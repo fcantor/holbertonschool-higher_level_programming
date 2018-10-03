@@ -10,8 +10,7 @@ class Square():
     '''
     def __init__(self, size=0, position=(0, 0)):
         '''
-        Args:
-            size: size of the square
+        Initialize method for the Square class
         '''
         if type(size) is not int:
             raise TypeError("size must be an integer")
@@ -78,6 +77,8 @@ class Square():
         if self.size == 0:
             print()
         else:
+            for i in range(self.position[1]):
+                print()
             row = ' ' * self.position[0]
             row += ''.join('#' for c in range(self.size))
             print('\n'.join(row for r in range(self.size)))
