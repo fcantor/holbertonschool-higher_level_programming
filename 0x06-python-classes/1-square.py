@@ -3,6 +3,7 @@
 Square class definition
 '''
 
+
 class Square():
     '''
     Square class with private attribute size
