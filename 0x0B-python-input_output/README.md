@@ -52,3 +52,6 @@ File | Description
 12-student.py | Same as
 13-student.py | Same as
 14-pascal_triangle.py | Function that returns a list of lists of integers representing the Pascal's triangle of n
+
+## Author
+Francesca Cantor
