@@ -17,7 +17,8 @@ class Student:
     def to_json(self, attrs=None):
         if attrs is None:
             return self.__dict__
-        return ({key: value for key, value in self.__dict__.items() if key in attrs})
+        return ({key: value for key, value in self.__dict__.items()
+                 if key in attrs})
 
     def reload_from_json(self, json):
         self.__dict__.update(json)
