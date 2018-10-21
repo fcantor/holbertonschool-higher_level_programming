@@ -59,3 +59,6 @@ tests/ | All files in this folder have classes and methods that were unit tested
 models/base.py, models/__init__.py | This is the "base" of all other classes in this project
 models/rectangle.py | A class ```Rectangle``` which inherits from the ```Base``` class
 models/square.py | A class ```Square``` which inherits from the ```Rectangle``` class
+
+## Author
+Francesca Cantor
