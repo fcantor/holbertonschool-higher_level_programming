@@ -36,3 +36,14 @@ class Base:
     def from_json_string(json_string):
         ''' returns the list of the JSON string rep of json_string '''
         return json.loads(json_string or '[]')
+
+    @classmethod
+    def create(cls, **dictionary):
+        ''' returns an instance with all attr set '''
+        if cls.__name__ == 'Rectangle':
+            new = cls(1, 1)
+        if cls.__name__ == 'Square':
+            new = cls(1)
+        new.update(**dictionary)
+        return new
+
