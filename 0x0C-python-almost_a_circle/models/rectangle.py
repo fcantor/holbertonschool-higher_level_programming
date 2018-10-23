@@ -87,7 +87,7 @@ class Rectangle(Base):
         return ("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"
                 .format(self.id, self.x, self.y, self.width, self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         ''' Updates the class Rectangle '''
         if args:
             keys = ['id', 'width', 'height', 'x', 'y']
