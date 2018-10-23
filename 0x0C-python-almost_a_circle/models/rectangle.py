@@ -32,7 +32,7 @@ class Rectangle(Base):
     @property
     def height(self):
         ''' height value getter '''
-        return self._height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -46,7 +46,7 @@ class Rectangle(Base):
     @property
     def x(self):
         ''' x value getter '''
-        return self._x
+        return self.__x
 
     @x.setter
     def x(self, value):
@@ -60,7 +60,7 @@ class Rectangle(Base):
     @property
     def y(self):
         ''' y value getter '''
-        return self._y
+        return self.__y
 
     @y.setter
     def y(self, value):
@@ -73,11 +73,11 @@ class Rectangle(Base):
 
     def area(self):
         ''' calculates the area of the rectangle '''
-        return (self.__height * self.__width)
+        return (self.height * self.width)
 
     def display(self):
         ''' prints out the Rectangle instance with the char # '''
-        for row in range(self.__y):
+        for row in range(self.y):
             print()
         for row in range(self.__height):
-            print('{}{}'.format(' ' * self.__x, '#' * self.__width))
+            print('{}{}'.format(' ' * self.x, '#' * self.width))
