@@ -31,3 +31,8 @@ class Base:
             json_string = '[]'
         with open(cls.__name__ + '.json', 'w') as f:
             f.write(json_string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        ''' returns the list of the JSON string rep of json_string '''
+        return (json.loads(json_string) or [])
