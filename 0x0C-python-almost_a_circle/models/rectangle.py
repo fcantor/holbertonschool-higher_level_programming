@@ -83,12 +83,12 @@ class Rectangle(Base):
             print('{}{}'.format(' ' * self.x, '#' * self.width))
 
     def __str__(self):
-        ''' Prints rectangle info in a different format '''
+        ''' prints rectangle info in a different format '''
         return ("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"
                 .format(self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
-        ''' Updates the class Rectangle '''
+        ''' updates the class Rectangle '''
         if args:
             keys = ['id', 'width', 'height', 'x', 'y']
             for key, value in zip(keys, args):
@@ -97,3 +97,8 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        ''' returns the dictionary representation of a Rectangle class '''
+        return {'id': self.id, 'width': self.width,
+                'height': self.height, 'x': self.x, 'y': self.y}
