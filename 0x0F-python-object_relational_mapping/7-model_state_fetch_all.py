@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 ''' Script that lists all State objects from the database hbtn_0e_6_usa '''
 
-import sys
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -20,5 +19,5 @@ if __name__ == "__main__":
     ''' query object which loads instances of State '''
     result = session.query(State).all()
     for row in result:
-        print(row)
+        print("{}: {}".format(row.id, row.name))
     session.close()
