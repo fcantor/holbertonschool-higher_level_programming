@@ -16,7 +16,7 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     ''' execute SQL queries '''
-    cur.execute("SELECT * FROM states WHERE name like 'N%' ORDER BY states.id ASC")
+    cur.execute("SELECT * FROM states WHERE name like 'N%' ORDER BY id")
 
     ''' fetch all-at-once '''
     rows = cur.fetchall()
