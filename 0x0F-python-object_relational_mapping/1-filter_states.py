@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     ''' fetch all-at-once '''
     rows = cur.fetchall()
-    for col in rows:
-        print("{}".format(col))
+    for r in rows:
+        print("{}".format(r))
     cur.close()
     db.close()
