@@ -18,7 +18,7 @@ if __name__ == "__main__":
     ''' cursor for multiple separate working envs thru one connection '''
     cur = db.cursor()
 
-    ''' execute SQL queries with BINARY for byte-by-byte comparison '''
+    ''' execute SQL queries '''
     cur.execute("SELECT * FROM states WHERE name = %s ORDER BY\
     states.id", (argv[4],))
 
