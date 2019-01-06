@@ -10,12 +10,12 @@ if __name__ == "__main__":
     ''' create an instance of Engine=core interface to the database '''
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
                            format(argv[1], argv[2], argv[3]),
-                                  pool_pre_ping=True)
+                           pool_pre_ping=True)
     '''pool_pre_ping tests connections for liveness upon each checkout'''
     ''' create a session '''
     session = sessionmaker(bind=engine)()
     ''' query object which loads instances of State '''
-    result  = session.query(State).all()
+    result = session.query(State).all()
     for row in result:
         print(row)
     session.close()
