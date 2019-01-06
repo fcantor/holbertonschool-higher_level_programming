@@ -15,7 +15,7 @@ if __name__ == "__main__":
     ''' cursor for multiple separate working envs thru one connection '''
     cur = db.cursor()
 
-    ''' execute SQL queries '''
+    ''' execute SQL queries with BINARY for byte-by-byte comparison '''
     cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id")
 
     ''' fetch all-at-once '''
