@@ -20,7 +20,8 @@ if __name__ == "__main__":
     session = sessionmaker(bind=engine)()
 
     ''' work with session to change object name '''
-    result = session.query(State, City).filter(State.id == City.state_id).order_by(City.id).all()
+    result = session.query(State, City).filter(
+        State.id == City.state_id).order_by(City.id).all()
     for state, city in result:
         print("{}: ({:d}) {}".format(state.name, city.id, city.name))
     session.close()
