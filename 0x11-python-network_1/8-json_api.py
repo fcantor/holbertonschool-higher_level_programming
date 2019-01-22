@@ -11,11 +11,12 @@ if __name__ == "__main__":
     q = ""
     if len(argv) > 1:
         q = argv[1]
+    resp = post("http://0.0.0.0:5000/search_user", data={'q': q})
     try:
-        resp = post("http://0.0.0.0:5000/search_user", data={'q': q}).json()
+        f = resp.json()
     except:
         print("Not a valid JSON")
-    if resp:
-        print("[{}] {}".format(resp['id'], resp['name']))
+    if f:
+        print("[{}] {}".format(f['id'], f['name']))
     else:
         print("No result")
