@@ -9,7 +9,6 @@ the response
 """
 
 
-
 if __name__ == "__main__":
     try:
         with urlopen(argv[1]) as resp:
