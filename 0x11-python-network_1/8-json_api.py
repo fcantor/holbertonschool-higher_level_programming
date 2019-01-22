@@ -11,9 +11,8 @@ if __name__ == "__main__":
     q = ""
     if len(argv) > 1:
         q = argv[1]
-    resp = post("http://0.0.0.0:5000/search_user", data={'q': q})
     try:
-        json = resp.json()
+        resp = post("http://0.0.0.0:5000/search_user", data={'q': q}).json()
     except:
         print("Not a valid JSON")
     if resp:
