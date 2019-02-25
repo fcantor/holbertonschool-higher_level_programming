@@ -10,6 +10,7 @@ if (process.argv.length < 4) {
       list.push(process.argv[i]);
     }
   }
-  let sorted = list.sort().reverse();
-  console.log(sorted[1]);
+  // removes duplicate
+  let uniq = [...new Set(list.sort().reverse())]
+  console.log(uniq[1]);
 }
