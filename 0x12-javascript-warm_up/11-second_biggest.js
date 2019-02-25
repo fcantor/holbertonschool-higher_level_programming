@@ -11,7 +11,7 @@ if (process.argv.length < 4) {
     }
   }
   // removes duplicate
-  let sorted = list.sort(function(a, b){return a-b}).reverse();
+  let sorted = list.sort(function (a, b) { return a - b; }).reverse();
   let uniq = [...new Set(sorted)];
   console.log(uniq[1]);
 }
