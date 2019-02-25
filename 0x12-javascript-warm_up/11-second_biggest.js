@@ -7,10 +7,11 @@ if (process.argv.length < 4) {
 } else {
   for (let i = 2; i < process.argv.length; i++) {
     if (Number(process.argv[i])) {
-      list.push(process.argv[i]);
+      list.push(Number(process.argv[i]));
     }
   }
   // removes duplicate
-  let uniq = [...new Set(list.sort().reverse())];
+  let sorted = list.sort(function(a, b){return a-b}).reverse();
+  let uniq = [...new Set(sorted)];
   console.log(uniq[1]);
 }
