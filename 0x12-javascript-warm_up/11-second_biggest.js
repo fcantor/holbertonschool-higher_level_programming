@@ -11,6 +11,6 @@ if (process.argv.length < 4) {
     }
   }
   // removes duplicate
-  let uniq = [...new Set(list.sort().reverse())]
+  let uniq = [...new Set(list.sort().reverse())];
   console.log(uniq[1]);
 }
